@@ -1,8 +1,12 @@
 const repeatString = function(str, num) {
     let returnString = "";
-    while (num > 0) {
-        returnString += str;
-        num--;
+    if (num < 0) {
+        returnString = "ERROR";
+    } else {
+        while (num > 0) {
+            returnString += str;
+            num--;
+        }
     }
     return returnString;
 };
