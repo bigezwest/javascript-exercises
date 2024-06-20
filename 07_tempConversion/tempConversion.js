@@ -1,6 +1,8 @@
 const convertToCelsius = function(tempF) {
   const tempC = (tempF - 32) * (5 / 9);
-  return tempC;
+  const roundedTempC = parseFloat(tempC.toPrecision(3));
+
+  return roundedTempC;
 };
 
 const convertToFahrenheit = function(temp) {
