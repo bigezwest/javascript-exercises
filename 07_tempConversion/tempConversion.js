@@ -5,9 +5,9 @@ const convertToCelsius = function(tempF) {
   return roundedTempC;
 };
 
-const convertToFahrenheit = function(temp) {
-  // const f = temp * ( 9 / 5) + 32;
-  // return f;
+const convertToFahrenheit = function(tempC) {
+  const f = tempC * ( 9 / 5) + 32;
+  return f;
 }
 
 // Do not edit below this line
