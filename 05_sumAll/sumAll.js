@@ -2,7 +2,9 @@ const sumAll = function(a, b) {
     let result = null;
     let i = 0;
     let j = 0;
-    if (a < 0 || b < 0){
+    if (a < 0 || b < 0) {
+        result = "ERROR";
+    } else if ( typeof(a) != "number" || typeof(b) != "number" ) {
         result = "ERROR";
     } else {
         if (a < b) {
