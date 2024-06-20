@@ -1,13 +1,14 @@
-const removeFromArray = function(arr, paramsToRemove) {
+const removeFromArray = function(arrIn, ...params) {
 
-    const arrayFiltered = arr.filter(function (item) {
+    const newArray = [];
 
-            return item !== paramsToRemove;
+    arrIn.forEach((item) => {
+        if (!params.includes(item)) {
+            newArray.push(item);
+        }
     });
-
-    return arrayFiltered;
-
-};
+    return newArray;
+}
 
 // Do not edit below this line
 module.exports = removeFromArray;
