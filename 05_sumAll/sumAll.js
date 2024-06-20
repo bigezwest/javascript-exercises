@@ -1,21 +1,23 @@
 const sumAll = function(a, b) {
-    let sum = 0;
+    let result = null;
     let i = 0;
     let j = 0;
-    if (a < b) {
-        i = a;
-        j = b;
+    if (a < 0 || b < 0){
+        result = "ERROR";
     } else {
-        i = b;
-        j = a;
+        if (a < b) {
+            i = a;
+            j = b;
+        } else {
+            i = b;
+            j = a;
+        }
+        for (i; i <= j; i++) {
+            result += i;
+        }
     }
 
-    for (i; i <= j; i++) {
-        sum += i;
-
-    }
-
-    return sum;
+    return result;
 };
 
 // Do not edit below this line
