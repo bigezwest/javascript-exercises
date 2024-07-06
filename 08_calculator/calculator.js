@@ -12,8 +12,10 @@ const sum = function(arr) {
   }, 0);
 };
 
-const multiply = function() {
-
+const multiply = function(arr) {
+  return arr.reduce((accumulator, current) => {
+    return accumulator *= current;
+  }, 1);
 };
 
 const power = function() {
