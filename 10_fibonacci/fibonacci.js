@@ -5,10 +5,11 @@ const fibonacci = function(member) {
         if (i <= 1) {
             returnValue.push(1);
         } else {
-            returnValue.push(i + returnValue[i - 1]);
+            returnValue.push(returnValue[i -1] + returnValue[i - 2]);
         }
     }
-    return (returnValue.length - 1);
+    // return returnValue;
+    return (returnValue[returnValue.length - 1]);
 };
 
 // Do not edit below this line
