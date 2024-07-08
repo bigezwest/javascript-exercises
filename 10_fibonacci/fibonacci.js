@@ -1,15 +1,36 @@
 const fibonacci = function(member) {
-    let returnValue = [];
+    let array = [];
+    let returnValue;
 
-    for (let i = 0; i < member; i++) {
-        if (i <= 1) {
-            returnValue.push(1);
-        } else {
-            returnValue.push(returnValue[i -1] + returnValue[i - 2]);
-        }
+    // Accept String -----------------------------
+    if (typeof(member) == "string") {
+        let intMember = Number.parseInt(member);
+        getFib(intMember);
     }
-    // return returnValue;
-    return (returnValue[returnValue.length - 1]);
+
+    // Do not allow negative num -------------
+    if (member < 0) {
+        returnValue = "OOPS";
+    } else {
+        let intMember = member;
+        getFib(intMember);
+    }
+
+    // Return Fibonacci number -------------------
+    function getFib(intMember) {
+        for (let i = 0; i <= intMember; i++) {
+            if (i == 0) {
+                array.push(i);
+            } else if (i == 1) {
+                array.push(1);
+            } else if (i > 1) {
+                array.push(
+                    (array[i -1] + array[i - 2]));
+            }
+        }
+        returnValue = array[intMember];
+    }
+    return returnValue;
 };
 
 // Do not edit below this line
